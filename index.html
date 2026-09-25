@@ -1,187 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site do projeto Última Saída - apresentação do jogo e experiência do usuário.">
-    <title>Última Saída</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+	<title>Ultima Saída 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<!-- Made with Construct, the game and app creator :: https://www.construct.net -->
+	<meta name="generator" content="Scirra Construct">
 
+
+
+	<link rel="manifest" href="appmanifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+	<link rel="icon" type="image/png" href="icons/icon-512.png">
+
+	<link rel="stylesheet" href="style.css">
+
+
+
+</head> 
+ 
 <body>
-    <header class="cabecalho">
-        <nav class="nav">
-            <a class="logo" href="#home">ÚLTIMA <span>SAÍDA</span></a>
 
-            <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
-                ☰
-            </button>
+	
 
-            <ul class="menu" id="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre e História</a></li>
-                <li><a href="#telas">Telas</a></li>
-                <li><a href="#ux">UX</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#JOGAR">JOGAR</a></li>
-            </ul>
-        </nav>
-    </header>
+<script>
+if (location.protocol.substr(0, 4) === "file")
+{
+	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+}
+</script>
+	
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+	<script src="scripts/modernjscheck.js"></script>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js" type="module"></script>
+	<script src="scripts/main.js" type="module"></script>
+	<script src="scripts/register-sw.js" type="module"></script>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="hero-conteudo">
-                <h1>Última<br><span>Saída</span></h1>
-                <p class="subtitulo">
-                </p>
-                <a class="botao" href="#jogo">Conhecer o jogo</a>
-            </div>
-                <div class="hero-card">
-                    <img src="UltimaSaida.jpeg" alt="Ultima Saida" class="hero-card-img">
-                </div>
-
-        <section class="secao" id="sobre">
-            <div class="titulo-secao">
-                <h2>Sobre e História</h2>
-            </div>
-
-            <div class="texto">
-                <p>
-                    <strong>Última Saída</strong> é um projeto de jogo desenvolvido
-                    como atividade acadêmica, com foco em criar uma experiência
-                    simples, envolvente e fácil de entender. A proposta mistura
-                    exploração, suspense e pequenos desafios para fazer o jogador
-                    prestar atenção no ambiente e pensar antes de agir.
-                </p>
-
-                <h3>A história</h3>
-
-                <p>
-                    A história começa quando o personagem acorda em um lugar desconhecido e percebe que o caminho ao
-                    redor está bloqueado. A única direção possível é para cima. À frente, surgem plataformas espalhadas,
-                    formando um caminho que parece não ter fim. Ele começa a subir, pulando de uma plataforma para
-                    outra, e logo percebe que o desafio aumenta e um único erro pode fazê-lo cair. Mesmo sem saber o que
-                    existe no topo, ele continua subindo. Quanto
-                    mais alto chega, maior sua pontuação. O objetivo é simples: subir o máximo que conseguir e descobrir
-                    até onde esse caminho pode levá-lo. A aventura continua enquanto ele conseguir permanecer nas
-                    plataformas. Quando ele cai, a tentativa termina, mas sempre há a possibilidade de recomeçar e
-                    tentar ir ainda mais alto.
-                </p>
-            </div>
-        </section>
-
-        <section class="secao destaque" id="JOGAR">
-            <div class="titulo-secao">
-                <p class="tag">GAME</p>
-                <h2>JOGAR</h2>
-            </div>
-            <div class="cards">
-                <article class="card">
-                    <h3>Subir</h3>
-                    <p>Controle o personagem, pulando para continuar avençando para cima.</p>
-                </article>
-                <article class="card">
-                    <h3>Pontuar</h3>
-                    <p>Quanto mais alto você chegar, maior será sua pontuação.</p>
-                </article>
-                <article class="card">
-                    <h3>Sobreviver</h3>
-                    <p>Evite cair e continue subindo para sobreviver o máximo possível.</p>
-                </article>
-            </div>
-            <div class="aviso">
-                <iframe src="Game1/index.html" width="300" height="300"></iframe>
-            </div>
-               
-        </section>
-
-        <section class="secao" id="telas">
-            <div class="titulo-secao">
-                <p class="tag">VISUAL</p>
-                <h2>Telas</h2>
-            </div>
-            <div class="telas-grid">
-                <div class="tela-box">
-                    <img src="Foto1.png"Tela 1" class="tela-img">
-                </div>
-                <div class="tela-box">
-                    <img src="Foto2.png" alt="Tela 2" class="tela-img">
-                </div>
-                <div class="tela-box">
-                    <img src="Foto3.png" alt="Tela 3" class="tela-img">
-                </div>
-        </section>
-
-        <section class="secao destaque" id="ux">
-            <div class="titulo-secao">
-                <p class="tag">EXPERIÊNCIA DO USUÁRIO</p>
-                <h2>UX</h2>
-            </div>
-
-            <div class="ux-grid">
-                <div class="ux-box">
-                    <h3>Persona</h3>
-                    <p>
-                        <strong>Nome:</strong> Peter, 20 anos<br>
-                        <strong>Perfil:</strong> Gosta de jogos simples e desafiadores, procura partidas rápidas para se
-                        divertir e tentar superar seus próprios recordes.
-                    </p>
-                </div>
-
-                <div class="ux-box">
-                    <h3>Principal necessidade</h3>
-                    <p>
-                        Uma experiência simples de entender, com comandos fáceis e um objetivo claro, subir o máximo
-                        possível.
-                    </p>
-                </div>
-
-                <div class="ux-box">
-                    <h3>Dor da persona</h3>
-                    <p>
-                        Frustração com jogos muito complicados, controles difíceis ou falta de clareza sobre o que
-                        fazer.
-                    </p>
-                </div>
-
-                <div class="ux-box">
-                    <h3>Decisões de UX</h3>
-                    <p>
-                        Criar controles simples, deixar o objetivo evidente, mostrar a pontuação durante a partida e
-                        manter uma interface limpa para que o jogador entenda tudo rapidamente.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="secao" id="contato">
-            <div class="titulo-secao">
-                <h2>Contato</h2>
-            </div>
-
-            <form id="formContato" class="formulario">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Digite seu nome">
-
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail">
-
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
-
-                <button class="botao" type="submit">Enviar mensagem</button>
-            </form>
-
-            <div id="resultado" class="resultado" aria-live="polite"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Última Saída • Projeto acadêmico</p>
-        <p>Luiz Felipe Picinini Walter</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
+</body> 
 </html>
